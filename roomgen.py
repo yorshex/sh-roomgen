@@ -21,6 +21,7 @@ freely, subject to the following restrictions:
 '''
 
 import argparse
+import math
 
 def main():
     parser = argparse.ArgumentParser(description='Generate a generic Smash Hit room')
@@ -55,7 +56,7 @@ def main():
 
     parser.add_argument('-r', '--rotation', nargs=2, dest='rotation', type=float,
                         metavar=('amount', 'range'),
-                        help="set rotation; setting range to 0 results in CW/CCW rotation")
+                        help="set rotation; ragne is set in degrees; setting range to 0 results in CW/CCW rotation")
 
     parser.add_argument('-g', '--gravity', dest='gravity', type=float,
                         metavar='gravity',
@@ -97,6 +98,7 @@ function init()
 \tpEnd = mgGetBool("end", false)
 ''')
     if params.rotation is not None:
+        params.rotation[1] = math.radians(params.rotation[1])
         f.write(f'\n\tmgRotation({str(params.rotation)[1:-1]})')
     if params.gravity is not None:
         f.write(f'\n\tmgGravity({params.gravity})')
