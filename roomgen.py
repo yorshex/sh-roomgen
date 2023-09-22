@@ -21,13 +21,6 @@ freely, subject to the following restrictions:
 '''
 
 import argparse
-from typing import Optional as opt
-from typing import Union
-
-float3 = tuple[float, float, float]
-float4 = tuple[float, float, float, float]
-float6 = tuple[float, float, float, float, float, float]
-Segment = Union[tuple[str, float], tuple[str, float, int]]
 
 def main():
     parser = argparse.ArgumentParser(description='Generate a generic Smash Hit room')
