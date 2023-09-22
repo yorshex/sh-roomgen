@@ -137,7 +137,7 @@ function init()
     if params.end_segment is not None:
         f.write(f'''
 \tif pEnd then
-\t\tl = l + mgSegment("abyss/narrow/door", -l)
+\t\tl = l + mgSegment("{params.end_segment}", -l)
 \tend''')
     f.write('\n')
     f.write(f'''
