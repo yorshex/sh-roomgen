@@ -56,7 +56,7 @@ def main():
 
     parser.add_argument('-r', '--rotation', nargs=2, dest='rotation', type=float,
                         metavar=('amount', 'range'),
-                        help="set rotation; ragne is set in degrees; setting range to 0 results in CW/CCW rotation")
+                        help="set rotation; range is set in degrees; setting range to 0 results in CW/CCW rotation")
 
     parser.add_argument('-g', '--gravity', dest='gravity', type=float,
                         metavar='gravity',
